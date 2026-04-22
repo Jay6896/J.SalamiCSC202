@@ -1,0 +1,124 @@
+<!-- 
+ 
+    **HTML BOILERPLATE is the initial code you start with when writing HTML
+    It is ! or doc. ! uses emmet abbreviation
+    
+    **Current HTML is HTML 5 which introduced semantics
+    
+    **IF YOU USE SEMANTICS IN ANYTHING OTHER THAN HTML 5, IT WOULD NOT BE READ AS A SEMANTIC
+
+    **<!DOCTYPE html> IS WHAT IS USED TO DERMACATE SEMANTIC HTML, WITHOUT IT IT WOULD NOT BE READ AS SEMANTIC
+
+    **Boolean attributes. These are special attributes that represent a binary "true" or "false" state based purely on their presence or absence in an HTML tag.
+    
+    **A tag that doesnt have a closing tag is a dead element
+
+    **Block Element - it takes up the entire line of the parent e.g paragraphs
+    **Inline Element - Text elements that appear within a line of text, can be written in another element e.g <p>He is <strong>tall</strong></p>, <p> is inline since it can hold other elements
+
+    **<strong></strong> is used to bolden
+
+    ** The <body>/body> must be in every page, it holds displayable info and must appear only ONCE
+
+    **********************************************************
+    ** MUST NOT HAVE MORE THAN ONE <h1></h1>, THE H1 MUST ALSO 
+    **********************************************************
+
+    ** There is <h1> to <h6> BUT STOP AT <h3> ATMOST
+
+    ** NOTE: <div> IS NONE SEMANTIC, YOU ONLY USE IT WHEN THE ELEMENT IS NOT IMPORTANT
+
+    ** LEARN ALL THE SEMANTICS
+
+    ** TO GENERATE DUMMY TEXT, DO (p>lorem*2)*3
+
+    ** RELATIVE ELEMENTS IN HTML relative file paths, which are used to link resources based on their location relative to the current file rather than
+    using a full web address
+
+    ** NOTE: WHEN ROUTING, JUST ROUTE TO THE FOLDER AND LEAVE THE FILE AS index.html
+
+    ** NOTE href="./saved-items.html" IS TREATED AS A LINK
+       WHILE href="./saved-items" IS TREATED AS A ROUTE
+
+    ** NOTE: ../index.html TAKES YOU OUT OF THE FOLDER TO PREVIOUS FOLDERS
+
+    ** TO REMOVE THE UNDERLINE IN THE <a> TAG, IN CSS DO text-decoration: none; OR TYPE tdn
+    -->
+    
+
+
+<!DOCTYPE html> <!-- The Semantic identifier, HTML 5 -->
+<html lang="en"> <!-- The root element, everything must be inside the html element -->
+<head>
+    <meta charset="UTF-8">   <!-- UTF-8 allows for emojis and stickers to be added -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Used to try and keep all elements in one page -->
+    <title>NOT my first HTML class</title> <!-- The name that displays on the browser tab -->
+    <link rel="icon" href="/Week - 8/Icons/favicon.ico">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body style="overflow-x:hidden;">
+    <!-- navbar section -->
+    <nav class="navbar">
+        <ul>
+            <!-- ul>(li>a)*3  is used to autocreate 3 list items -->
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../browse.html">Browse</a></li>
+            <li><a href="../saved-items">Saved Items</a></li>
+            <li><a href="../contacts">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <!-- main section -->
+     <main class="main">
+        <img src="images/main-image.jpg_.jpg" alt="main-image">
+        <h1>Highest Selling Items Today!</h1>
+        <div class="deals-below">
+            <!-- Deal Card 1 -->
+            <div class="deals-card">
+                <div class="card-image">
+                    <img src="images/iphone.png" alt="phone-image">
+                </div>
+                <h2>iPhone 20</h2>
+                <h5>The Latest iPhone available, definitely not fake</h5>
+                <h2 style="color: red;">$2,000</h2>
+            </div>
+            <!-- Deal Card 2 -->
+            <div class="deals-card">
+                <div class="card-image">
+                    <img src="images/iphone.png" alt="phone-image">
+                </div>
+                <h2>iPhone 20</h2>
+                <h5>The Latest iPhone available, definitely not fake</h5>
+                <h2 style="color: red;">$2,000</h2>
+            </div>
+            <!-- Deal Card 3 -->
+            <div class="deals-card">
+                <div class="card-image">
+                    <img src="images/iphone.png" alt="phone-image">
+                </div>
+                <h2>iPhone 20</h2>
+                <h5>The Latest iPhone available, definitely not fake</h5>
+                <h2 style="color: red;">$2,000</h2>
+            </div>
+            <!-- Deal Card 4 -->
+            <div class="deals-card">
+                <div class="card-image">
+                    <img src="images/iphone.png" alt="phone-image">
+                </div>
+                <h2>iPhone 20</h2>
+                <h5>The Latest iPhone available, definitely not fake</h5>
+                <h2 style="color: red;">$2,000</h2>
+            </div>
+            <!-- Deal Card 5 -->
+            <div class="deals-card">
+                <div class="card-image">
+                    <img src="images/iphone.png" alt="phone-image">
+                </div>
+                <h2>iPhone 20</h2>
+                <h5>The Latest iPhone available, definitely not fake</h5>
+                <h2 style="color: red;">$2,000</h2>
+            </div>
+        </div>
+     </main>
+</body>
+</html>

@@ -1,0 +1,148 @@
+/* 
+        CSS FORMAT IS
+
+        selector{
+            property: value,
+        }
+*************************************************************************
+    ** CSS Selector types
+        * class selector
+        * id selector
+        * universal selector
+        * element selector
+        * attribute selector
+        * child selector - 
+        * sibling selector - all and adjacent sibling selectors
+        * pseudoClass selector
+        * pseudoElement selector
+        
+        ** ANCHOR ELEMENTS <a> DO NOT INHERIT COLOURS FROM THEIR PARENTS
+
+***************************************************************************
+    ** LEARN SELECTOR SPECIFICITIES
+*****************************************************************************
+
+    ** Universal Selector - *{}
+
+    ** Child Selector - (every) - .main h1
+        * Direct Selector - main > h1
+
+    ** Sibling Selector
+        * Adjacent Sibling Selector - h2 + p
+        * All Sibling Selector - h2 ~ p
+        NOTE - h2 + p only affects the first p after h2 while
+               h2 ~ p affects every p after h2
+
+*******************************************************************************
+*/
+
+
+
+.navbar{
+    height: 100%;
+    width: auto;
+    background-color: rgb(0, 0, 0);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.navbar ul{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    gap: 200px;
+}
+
+.navbar a{
+    text-decoration: none;
+}
+
+.navbar li{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: 700;
+    /* border: 2px solid black; */
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    background-color: rgb(0, 0, 0);
+}
+
+.navbar li:hover{
+    background-color: rgb(107, 107, 107);
+    cursor: pointer;
+}
+
+.navbar a{
+    color: white;
+}
+
+.main{
+    height: auto;
+    width: auto;
+    border: 2px solid black;
+}
+
+.main h1{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.main img{
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.deals-below{
+    border: 2px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 20px;
+    background-color: aliceblue;
+}
+
+.deals-card{
+    border: 2px solid rgb(29, 67, 162);
+    height: 350px;
+    width: 275px;
+    border-radius: 15px;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    transform: scale(1) ;
+}
+
+.deals-card:hover{
+    background-color: rgba(174, 174, 174, 0.24);
+    scale: 1.1;
+}
+
+.deals-card h2,
+.deals-card h5{
+    padding-left: 20px;
+    margin-bottom: 2px;
+}
+
+.card-image{
+    border: 2px solid rgb(29, 67, 162);
+    height: 175px;
+    width: 275px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.card-image img{
+    width: auto;
+    height: 100%;
+}
