@@ -89,7 +89,8 @@ const person = ['J','A','D'];
 let others = ['K','B','E'];
 
 console.log(others);
-
+// spread operator ...
+/* #**********************************************************************************# */
 // Replace others completely with a copy of person
 // (creates a new array; others now equals person elements)
 others = [...person];
@@ -116,10 +117,10 @@ console.log(mixed); // [['J','A','D'], 'K', 'B', 'E']  (one nested element + fla
 // flatten one level:
 console.log(nested.flat()); // ['J','A','D','K','B','E']
 
-// correct spelling: splice
+// .splice()
+/* #**********************************************************************************# */
+
 const a = ['a','b','c','d','e'];
-
-
 
 
 // remove 3 elements starting at index 1 -> removes 'b','c','d'
@@ -142,6 +143,8 @@ console.log(c); // ['a','NEW','b','c']
 
 
 // ARROW FUNCTIONS =>
+/* #**********************************************************************************# */
+
 // Normally, to check if a value is greater than something (or any logic in a function in general), we must declare a whole function for it
 
 function greater(n)
@@ -172,6 +175,7 @@ console.log(checkAndDescribe(12)); // { value: 12, isBig: true, desc: '>=4' }
 
 
 // .filter()
+/* #**********************************************************************************# */
 
 const numbers = [1,2,3,4,5,6,7,8,9,10];
 
@@ -179,14 +183,56 @@ const numbers = [1,2,3,4,5,6,7,8,9,10];
 const favNum = numbers.filter(num => num == 4);
 console.log(favNum); // [4]
 
-// The equivalent of doing
+// The equivalent of doing, NOTE: the funtion inside is the callback
 favNum = numbers.filter(function(num) { return num == 4; });
 
-// .map()
+// (FINDING EVEN NUMBER) multiple matches,:
+const evens = numbers.filter(n => n % 2 === 0); // [2,4,6,8,10]
 
-const increase = numbers.map(n => n + 5);
-console.log(increase);
+// use index:
+const afterFirstTwo = numbers.filter((n, i) => i > 1); // [3,4,5,6,7,8,9,10]
+
+// no matches -> empty array:
+const none = numbers.filter(n => n > 100); // []
+
+
+
+// .map(), it is a built-in function of Array instances that creates a new array by applying a provided function to every element in the original array. It is a non-mutating method, meaning it does not change the original array.
+/* #**********************************************************************************# */
+
+
+// NOTE: A callback is a function you pass into another function so the other function can call (invoke) it later.
+// array method callback (sync)
+const num = [1,2,3];
+const doubled = num.map(n => n * 2); // callback: n => n * 2
+
+
+// Simple transform (arrow, implicit return)
 // increases all numbers by 5
+// const numbers = [1,2,3,4,5]; - Reminder
+const increased = numbers.map(n => n + 5);
+console.log(increased); // [6,7,8,9,10]
+console.log(numbers);   // [1,2,3,4,5]
 
-console.log(numbers);
+// Using index and original array (all params available)
+const letters = ['a','b','c'];
+const labeled = letters.map((el, idx) => ({ idx, el }));
+console.log(labeled); // [{idx:0,el:'a'}, {idx:1,el:'b'}, {idx:2,el:'c'}]
 
+// Map to objects (create new objects to avoid mutating originals)
+const users = [{name:'A'},{name:'B'}];
+const clonedWithId = users.map((u, i) => ({ id: i+1, name: u.name }));
+console.log(clonedWithId); // [{id:1,name:'A'},{id:2,name:'B'}]
+
+// Chain with filter
+const nums = [1,2,3,4,5,6];
+const doubledEvens = nums.filter(n => n % 2 === 0).map(n => n * 2);
+console.log(doubledEvens); // [4,8,12]
+
+// flatMap for one-level flatten + map
+const pairs = [1,2,3];
+const expanded = pairs.flatMap(n => [n, n*10]);
+console.log(expanded); // [1,10,2,20,3,30]
+
+
+// .find() returns the first element while .filter() returns a new array
