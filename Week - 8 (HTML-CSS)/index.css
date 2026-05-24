@@ -22,9 +22,10 @@
     ** LEARN SELECTOR SPECIFICITIES
 *****************************************************************************
 
-    ** Universal Selector - *{}
+    ** Universal Selector - *{} - used to remove default styles
 
-    ** Child Selector - (every) - .main h1
+    ** Child Selector - (every) -
+        * Class Selector - .main h1
         * Direct Selector - main > h1
 
     ** Sibling Selector
@@ -33,7 +34,15 @@
         NOTE - h2 + p only affects the first p after h2 while
                h2 ~ p affects every p after h2
 
+    ** Attribute Selector
+        * Img[src$= "png"] - this means style all image tags with attribute png
+        * a[href ^= "http"]
+
 *******************************************************************************
+
+    LEARN PSEUDOCODE CLASS AND PSEUDOELEMENTS, LEARN THEM ALL
+    * Pseudoclasses are treated as classes so their specificity is 010
+    * Pseudoelements (::before,::after,::selection,:: are treated as elements so their specificity is 011
 */
 
 
