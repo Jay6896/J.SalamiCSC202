@@ -1,7 +1,7 @@
 function rand(a = Date.now(),rand_limit)
 {
-    rand_limit = 100
-    rand_val = a % rand_limit
+    rand_limit = 5
+    rand_val = a % (rand_limit+1)
     console.log(rand_val)
 }
 
@@ -26,4 +26,5 @@ rand()
 module.exports = rand
 module.exports = greaterOrEqual
 module.exports = lessOrEqual
+
 // console.log(Date.now()% 100)
