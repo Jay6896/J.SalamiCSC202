@@ -1,0 +1,33 @@
+name: CI Pipeline
+
+on:
+  # Trigger this workflow when code is pushed to main
+  push:
+    branches: [main]
+  # Also trigger when a pull request targets main
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    # Run this job on the latest Ubuntu runner hosted by GitHub
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        # Fetch the repository contents so later steps can access source files
+        uses: actions/checkout@v5
+
+      - name: Set up Node.js
+        # Use Node.js version 16.x for this workflow
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: Install dependencies
+        # Install Node.js dependencies from package.json
+        run: npm install
+
+      - name: Run tests
+        # Execute tests using npm test
+        run: npm test
